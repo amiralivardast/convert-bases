@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Convert Bases</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="{{ url_for('static', filename='icon.png') }}">
+        <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+    </head>
+    <body>
+        <div class="header">
+            <h1>Convert Bases</h1>
+        </div>
+
+        <!-- convert Hexadecimal to Octal, Binary and Decimal with python language and flask and Jinja library -->
+        <div class="section">
+            <h2>Convert Hexadecimal</h2>
+            <form id="hex" class="form" action="/" method="POST">
+                <input type="text" name="hex" placeholder="enter number Hexadecimal">
+                <input type="submit" value="=" method="POST">
+            </form>
+        </div> 
+        <div class="section">
+            <input type="text" value="Octal: {% if octal is defined %}{{ octal }}{% endif %}" readonly>
+            <input type="text" value="Binary: {% if binary is defined %}{{ binary }}{% endif %}" readonly>
+            <input type="text" value="Decimal: {% if decimal is defined %}{{ decimal }}{% endif %}" readonly>
+        </div>
+
+        <!-- convert Decimal to Octal, Binary and Hexadecimal with python language and flask and Jinja library -->
+        <div class="section">
+            <h2>Convert Decimal</h2>
+            <form id="dec" class="form" action="/" method="POST">
+                <input type="number" name="dec" placeholder="enter number Decimal">
+                <input type="submit" value="=" method="POST">
+            </form>
+        </div>
+        <div class="section">
+            <input type="text" value="Octal: {% if oct is defined %}{{ oct }}{% endif %}" readonly>
+            <input type="text" value="Binary: {% if bin is defined %}{{ bin }}{% endif %}" readonly>
+            <input type="text" value="Hexadecimal: {% if hex is defined %}{{ hex }}{% endif %}" readonly>
+        </div>
+
+        <!-- convert Binary to Octal, Decimal and Hexadecimal with python language and flask and Jinja library -->
+        <div class="section">
+            <h2>Convert Binary</h2>
+            <form id="bin" class="form" action="/" method="POST">
+                <input type="text" name="bin" placeholder="Enter Number Binary">
+                <input type="submit" value="=" method="POST">
+            </form>
+        </div>
+        <div class="section">
+            <input type="text" value="Octal: {% if octa is defined %}{{ octa }}{% endif %}" readonly>
+            <input type="text" value="Decimal: {% if dec is defined %}{{ dec }}{% endif %}" readonly>
+            <input type="text" value="Hexadecimal: {% if hexa is defined %}{{ hexa }}{% endif %}" readonly>
+        </div>
+
+        <!-- convert Octal to Decimal, Binary and Hexadecimal with python language and flask and Jinja library -->
+        <div class="section">
+            <h2>Convert Octal</h2>
+            <form id="oct" class="form" action="/" method="POST">
+                <input type="text" name="oct" placeholder="Enter Number Octal">
+                <input type="submit" value="=" method="POST">
+            </form>
+        </div>
+        <div class="section">
+            <input type="text" value="Decimal: {% if deci is defined %}{{ deci }}{% endif %}" readonly>
+            <input type="text" value="Binary: {% if binar is defined %}{{ binar }}{% endif %}" readonly>
+            <input type="text" value="Hexadecimal: {% if hexad is defined %}{{ hexad }}{% endif %}" readonly>
+        </div>
+    </body>
+</html>
